@@ -14,6 +14,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
+    <ApplicationInsightsResourceId>/subscriptions/aa2f6e6e-133a-48db-8da5-d494035a793c/resourcegroups/Default-ApplicationInsights-CentralUS/providers/microsoft.insights/components/TourOfHeroes</ApplicationInsightsResourceId>
   </PropertyGroup>
   <ItemGroup>
     <DnxInvisibleContent Include="bower.json" />
