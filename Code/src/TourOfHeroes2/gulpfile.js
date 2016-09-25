@@ -43,4 +43,8 @@ gulp.task("copy-css", function () {
     });
 });
 
-gulp.task("default", ["copy-js", "copy-css"]);
+gulp.task('clean-ts', function() {
+        del("./app/**/*.js");
+    });
+
+gulp.task("default", ["copy-js", "clean-ts", "copy-css"]);
