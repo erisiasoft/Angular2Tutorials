@@ -1,6 +1,7 @@
 ﻿{
+  "version":  "2.0.3" ,
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "module": "commonjs",
     "moduleResolution": "node",
     "sourceMap": true,
@@ -8,5 +9,10 @@
     "experimentalDecorators": true,
     "removeComments": false,
     "noImplicitAny": false
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "typings/index.d.ts",
+    "typings/globals"
+  ]
 }
