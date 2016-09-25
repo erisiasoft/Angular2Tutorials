@@ -4,6 +4,7 @@
     "target": "es6",
     "module": "commonjs",
     "moduleResolution": "node",
+    "outDir": "app/js/",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,

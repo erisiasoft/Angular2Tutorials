@@ -12,8 +12,11 @@ var js = [
     "./node_modules/zone.js/dist/zone.js",
     "./node_modules/reflect-metadata/Reflect.js",
     "./node_modules/systemjs/dist/system.src.js",
-    "./app/*.js",
     "./systemjs.config.js"
+];
+
+var app = [
+    "./app/**/*.js"
 ];
 
 var css = [
@@ -25,6 +28,9 @@ var fonts = [];
 gulp.task("copy-js", function () {
     _.forEach(js, function (file, _) {
         gulp.src(file).pipe(gulp.dest("./wwwroot/js"));
+    });
+    _.forEach(app, function (file, _) {
+        gulp.src(file).pipe(gulp.dest("./wwwroot/app"));
     });
 });
 
