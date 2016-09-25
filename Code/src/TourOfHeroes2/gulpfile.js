@@ -7,7 +7,7 @@ var _ = require("lodash"),
     cssmin = require("gulp-cssmin"),
     rename = require("gulp-rename");
 
-var js = [
+var sysJs = [
     "./node_modules/core-js/client/shim.min.js",
     "./node_modules/zone.js/dist/zone.js",
     "./node_modules/reflect-metadata/Reflect.js",
@@ -15,8 +15,12 @@ var js = [
     "./systemjs.config.js"
 ];
 
-var app = [
-    "./app/**/*.js"
+var appJs = [
+    "./app/js/*.js"
+];
+
+var map = [
+    "./app/js/*.map"
 ];
 
 var css = [
@@ -26,11 +30,14 @@ var css = [
 var fonts = [];
 
 gulp.task("copy-js", function () {
-    _.forEach(js, function (file, _) {
+    _.forEach(sysJs, function (file, _) {
         gulp.src(file).pipe(gulp.dest("./wwwroot/js"));
     });
-    _.forEach(app, function (file, _) {
-        gulp.src(file).pipe(gulp.dest("./wwwroot/app"));
+    _.forEach(appJs, function (comp, _) {
+        gulp.src(comp).pipe(gulp.dest("./wwwroot/app/"));
+    });
+    _.forEach(map, function (comp, _) {
+        gulp.src(comp).pipe(gulp.dest("./wwwroot/app/maps"));
     });
 });
 
@@ -45,6 +52,6 @@ gulp.task("copy-css", function () {
 
 gulp.task('clean-ts', function() {
         del("./app/**/*.js");
-    });
+});
 
-gulp.task("default", ["copy-js", "clean-ts", "copy-css"]);
+gulp.task("default", ["copy-js", "copy-css"]);

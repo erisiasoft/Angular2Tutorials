@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "TourOfHeroes2", "src\TourOfHeroes2\TourOfHeroes2.xproj", "{9231DAA7-11E2-4764-87CF-EB820F8FA53F}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ConsoleApp1", "src\ConsoleApp1\ConsoleApp1.xproj", "{0C93D4A9-F71E-4129-A244-D1A7C0834FC8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,11 +24,16 @@ Global
 		{9231DAA7-11E2-4764-87CF-EB820F8FA53F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9231DAA7-11E2-4764-87CF-EB820F8FA53F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9231DAA7-11E2-4764-87CF-EB820F8FA53F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C93D4A9-F71E-4129-A244-D1A7C0834FC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C93D4A9-F71E-4129-A244-D1A7C0834FC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C93D4A9-F71E-4129-A244-D1A7C0834FC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C93D4A9-F71E-4129-A244-D1A7C0834FC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{9231DAA7-11E2-4764-87CF-EB820F8FA53F} = {16317EED-5786-47D3-AAA5-D97536211530}
+		{0C93D4A9-F71E-4129-A244-D1A7C0834FC8} = {16317EED-5786-47D3-AAA5-D97536211530}
 	EndGlobalSection
 EndGlobal
