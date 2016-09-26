@@ -1,6 +1,8 @@
 ﻿/// <binding BeforeBuild='default' />
+/// <reference path="~/wwwroot/js/system.src.js" />
 "use strict";
 
+var requirejs = require('requirejs');
 var _ = require("lodash"),
     gulp = require("gulp"),
     uglify = require("gulp-uglify"),
@@ -19,7 +21,7 @@ var appJs = [
     "./app/js/*.js"
 ];
 
-var map = [
+var maps = [
     "./app/js/*.map"
 ];
 
@@ -34,10 +36,10 @@ gulp.task("copy-js", function () {
         gulp.src(file).pipe(gulp.dest("./wwwroot/js"));
     });
     _.forEach(appJs, function (comp, _) {
-        gulp.src(comp).pipe(gulp.dest("./wwwroot/app/"));
+        gulp.src(comp).pipe(gulp.dest("./wwwroot/app"));
     });
-    _.forEach(map, function (comp, _) {
-        gulp.src(comp).pipe(gulp.dest("./wwwroot/app/maps"));
+    _.forEach(maps, function (map, _) {
+        gulp.src(map).pipe(gulp.dest("./wwwroot/app"));
     });
 });
 

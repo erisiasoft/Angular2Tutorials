@@ -22,4 +22,3 @@ AppModule = __decorate([
     __metadata('design:paramtypes', [])
 ], AppModule);
 exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
