@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="configuration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="system.webServer">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="handlers">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="add">
+                      <xs:complexType>
+                        <xs:attribute name="name" type="xs:string" use="required" />
+                        <xs:attribute name="path" type="xs:string" use="required" />
+                        <xs:attribute name="verb" type="xs:string" use="required" />
+                        <xs:attribute name="modules" type="xs:string" use="required" />
+                        <xs:attribute name="resourceType" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="aspNetCore">
+                <xs:complexType>
+                  <xs:attribute name="processPath" type="xs:string" use="required" />
+                  <xs:attribute name="arguments" type="xs:string" use="required" />
+                  <xs:attribute name="stdoutLogEnabled" type="xs:boolean" use="required" />
+                  <xs:attribute name="stdoutLogFile" type="xs:string" use="required" />
+                  <xs:attribute name="forwardWindowsAuthToken" type="xs:boolean" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
