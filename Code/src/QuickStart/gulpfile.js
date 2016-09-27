@@ -48,4 +48,4 @@ gulp.task('clean-ts', function() {
         del("./app/**/*.js");
 });
 
-gulp.task("default", ["copy-js", "copy-css"]);
+gulp.task("default", ["copy-js", "copy-css", "clean-ts"]);
