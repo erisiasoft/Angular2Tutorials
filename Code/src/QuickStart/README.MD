@@ -25,3 +25,35 @@ I prefer PowerShell outside of Visual Studio, as it seems more stable than the N
 5. You should not follow Step 6 to start the application, but it might work even in the .NET project. 
 
 ### Making it Work
+
+New typings.json, up to date, from who knows where.
+Manually added wwwroot/css for stylings.css. Normally use gulp for LESS.
+Updated reference folders in Index.html to use files inside wwwroot.
+
+Updated `package.json`. Added
+- "del": "^2.2.2"
+- "gulp": "^3.9.1"
+- "gulp-delete-file": "^1.0.2"
+- "r.js": "^1.0.3"
+- "requirejs": "^2.3.2"
+
+Removed
+- "lite-server": "^2.2.2"
+
+Run `npm install` after changing `package.json`.
+
+Replaced `systemjs.config.js`, `tsconfig.json`, `typings.json` with those now in project to get `tsc` working properly.
+
+#### Static Files
+1. Added `"Microsoft.AspNetCore.StaticFiles":  "1.0.0"` to `dependencies` node of `project.json`.
+2. Deleted Hello world and added all code in `Startup.cs`.
+
+### Magic folders and GulFile
+
+wwwroot/app
+wwwroot/js
+app/js
+
+#### Misc
+
+web.xsd

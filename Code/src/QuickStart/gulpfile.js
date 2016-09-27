@@ -22,10 +22,6 @@ var maps = [
     "./app/js/*.map"
 ];
 
-var css = [
-    "./styles.css"
-];
-
 gulp.task("copy-js", function () {
     _.forEach(sysJs, function (file, _) {
         gulp.src(file).pipe(gulp.dest("./wwwroot/js"));
@@ -38,14 +34,8 @@ gulp.task("copy-js", function () {
     });
 });
 
-gulp.task("copy-css", function () {
-    _.forEach(css, function (file, _) {
-        gulp.src(file).pipe(gulp.dest("./wwwroot/css"));
-    });
-});
-
 gulp.task('clean-ts', function() {
         del("./app/**/*.js");
 });
 
-gulp.task("default", ["copy-js", "copy-css", "clean-ts"]);
+gulp.task("default", ["copy-js", "clean-ts"]);
