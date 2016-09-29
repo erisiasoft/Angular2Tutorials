@@ -1,4 +1,5 @@
-﻿/// <binding BeforeBuild="default" />
+﻿// TODO Rename root app to 'angular' or 'appSource' or 'jsSource'.
+/// <binding BeforeBuild="default" />
 /// <reference path="~/scripts/system.src.js" />
 "use strict";
 
