@@ -9,12 +9,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require("@angular/core");
+class Hero {
+}
+exports.Hero = Hero;
 let AppComponent = class AppComponent {
+    constructor() {
+        this.title = "Tour of Heroes";
+        this.hero = {
+            id: 1,
+            name: "windstorm"
+        };
+    }
 };
 AppComponent = __decorate([
     core_1.Component({
         selector: "my-app",
-        template: "<h1>My First Angular App</h1>"
+        template: `
+      <h1>{{title}}</h1>
+      <h2>{{hero.name}} details!</h2>
+      <div><label>Id: </label>{{hero.id}}</div>
+      <div>
+        <label for="nameInput">Name: </label>
+        <input id="nameInput" [(ngModel)]="hero.name" placeholder="name"> 
+      </div>
+    `
     }), 
     __metadata('design:paramtypes', [])
 ], AppComponent);

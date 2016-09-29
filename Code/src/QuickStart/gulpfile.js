@@ -1,4 +1,4 @@
-﻿/// <binding BeforeBuild='default' />
+﻿/// <binding BeforeBuild='clean-ts, default' />
 /// <reference path="~/wwwroot/js/system.src.js" />
 "use strict";
 
@@ -35,7 +35,8 @@ gulp.task("copy-js", function () {
 });
 
 gulp.task('clean-ts', function() {
-        del("./app/**/*.js");
+    del("./app/**/*.js");
+    del(".wwwroot/app");
 });
 
-gulp.task("default", ["copy-js", "clean-ts"]);
+gulp.task("default", ["copy-js"]);
