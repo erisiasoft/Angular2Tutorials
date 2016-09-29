@@ -28,3 +28,4 @@ AppModule = __decorate([
     __metadata('design:paramtypes', [])
 ], AppModule);
 exports.AppModule = AppModule;
+//# sourceMappingURL=C:/Dev/Angular2/Projects/Introduction/Code/src/QuickStart/wwwroot/app/app.module.js.map

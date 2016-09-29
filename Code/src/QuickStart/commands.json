@@ -1,0 +1,9 @@
+{
+  "commands": {
+    "tscompile": {
+      "fileName": "cmd.exe",
+      "workingDirectory": ".",
+      "arguments": "/c build\\tscompile.cmd"
+    }
+  }
+}

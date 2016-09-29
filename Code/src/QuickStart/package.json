@@ -26,6 +26,7 @@
     "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-delete-file": "^1.0.2",
+    "gulp-sourcemaps": "^1.6.0",
     "r.js": "^1.0.3",
     "reflect-metadata": "^0.1.3",
     "requirejs": "^2.3.2",
@@ -35,7 +36,8 @@
   },
   "devDependencies": {
     "concurrently": "^2.2.0",
-
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^3.0.1",
     "typescript": "^2.0.2",
     "typings": "^1.3.2"
   }
